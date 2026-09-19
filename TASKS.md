@@ -20,12 +20,13 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
-- [ ] **TASK-3: Sales trend chart**
-  - [ ] Line chart shows sales over time with correct data
-  - [ ] Interactive tooltips show exact values
-  - Commit:
 
 ## Done
+- [x] **TASK-3: Sales trend chart**
+  - [x] Line chart shows sales over time with correct data
+  - [x] Interactive tooltips show exact values
+  - Commit: 9f6c9f3
+  - Notes: clean.
 - [x] **TASK-2: KPI scorecards**
   - [x] Total Sales displayed as formatted currency (e.g. $116,500)
   - [x] Total Orders displayed as a formatted count (e.g. 482)
