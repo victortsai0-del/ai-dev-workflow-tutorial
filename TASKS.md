@@ -12,10 +12,11 @@ Each milestone moves through To Do -> In Progress -> Done.
 
 ## In Progress
 - [ ] **TASK-5: Test and deploy**
-  - [ ] Dashboard runs without errors or warnings against the full dataset
-  - [ ] All PRD acceptance criteria verified against expected output (~$116,500 total sales, 482 orders)
+  - [x] Dashboard runs without errors or warnings against the full dataset
+  - [x] All PRD acceptance criteria verified against expected output (~$116,500 total sales, 482 orders)
   - [ ] Deployed to Streamlit Community Cloud with a public URL
   - Commit:
+  - Notes: full pytest suite (8/8) and manual acceptance-criteria pass against the real dataset are clean — exact match on $116,500 / 482 orders, 12 monthly points, 5 categories and 4 regions all sorted descending, no errors/warnings, `venv/` confirmed untracked. Remaining checkbox (deploy) is the user's step per the plan — merge to `main`, push, then create the app on Streamlit Community Cloud.
 
 ## Done
 - [x] **TASK-4: Category and region breakdowns**
