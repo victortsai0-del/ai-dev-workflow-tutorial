@@ -9,10 +9,6 @@ Each milestone moves through To Do -> In Progress -> Done.
 - Changes committed with the milestone ID in the message
 
 ## To Do
-- [ ] **TASK-2: KPI scorecards**
-  - [ ] Total Sales displayed as formatted currency (e.g. $116,500)
-  - [ ] Total Orders displayed as a formatted count (e.g. 482)
-  - Commit:
 - [ ] **TASK-3: Sales trend chart**
   - [ ] Line chart shows sales over time with correct data
   - [ ] Interactive tooltips show exact values
@@ -28,6 +24,10 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
+- [ ] **TASK-2: KPI scorecards**
+  - [ ] Total Sales displayed as formatted currency (e.g. $116,500)
+  - [ ] Total Orders displayed as a formatted count (e.g. 482)
+  - Commit:
 
 ## Done
 - [x] **TASK-1: Project setup and data loading**
