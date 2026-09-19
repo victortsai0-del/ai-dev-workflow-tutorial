@@ -28,9 +28,10 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
-- [ ] **TASK-1: Project setup and data loading**
-  - [ ] App runs with `streamlit run app.py` and shows a title
-  - [ ] Loads `data/sales-data.csv`; handles date, numeric, and categorical columns per the data spec
-  - Commit:
 
 ## Done
+- [x] **TASK-1: Project setup and data loading**
+  - [x] App runs with `streamlit run app.py` and shows a title
+  - [x] Loads `data/sales-data.csv`; handles date, numeric, and categorical columns per the data spec
+  - Commit: 74e4e68
+  - Notes: first `streamlit run` hung on an interactive first-run onboarding prompt (asking for an email); fixed by pre-setting `~/.streamlit/credentials.toml` with a blank email, a one-time machine setting outside the repo. No code changes needed beyond the plan.
