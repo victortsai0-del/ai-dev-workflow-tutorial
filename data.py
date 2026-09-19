@@ -44,3 +44,11 @@ def monthly_trend(df):
     monthly = df.groupby(df["date"].dt.to_period("M"))["total_amount"].sum()
     monthly.index = monthly.index.to_timestamp()
     return monthly
+
+
+def sales_by_category(df):
+    return df.groupby("category")["total_amount"].sum().sort_values(ascending=False)
+
+
+def sales_by_region(df):
+    return df.groupby("region")["total_amount"].sum().sort_values(ascending=False)

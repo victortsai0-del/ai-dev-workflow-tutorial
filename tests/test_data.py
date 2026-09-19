@@ -3,7 +3,15 @@
 import pandas as pd
 import pytest
 
-from data import DataLoadError, load_data, monthly_trend, total_orders, total_sales
+from data import (
+    DataLoadError,
+    load_data,
+    monthly_trend,
+    sales_by_category,
+    sales_by_region,
+    total_orders,
+    total_sales,
+)
 
 
 def sample_df():
@@ -78,3 +86,17 @@ def test_monthly_trend():
         pd.Timestamp("2024-02-01"),
     ]
     assert result.tolist() == pytest.approx([150.00, 230.00])
+
+
+def test_sales_by_category():
+    result = sales_by_category(sample_df())
+
+    assert list(result.index) == ["Electronics", "Accessories"]
+    assert result.tolist() == pytest.approx([300.00, 80.00])
+
+
+def test_sales_by_region():
+    result = sales_by_region(sample_df())
+
+    assert list(result.index) == ["North", "South", "West"]
+    assert result.tolist() == pytest.approx([300.00, 50.00, 30.00])
