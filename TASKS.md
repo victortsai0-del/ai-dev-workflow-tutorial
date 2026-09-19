@@ -30,7 +30,7 @@ Each milestone moves through To Do -> In Progress -> Done.
   - [x] Total Sales displayed as formatted currency (e.g. $116,500)
   - [x] Total Orders displayed as a formatted count (e.g. 482)
   - Commit: 6724a2a
-  - Notes: verified against the full dataset — Total Sales $116,500, Total Orders 482, matching the PRD's expected output exactly.
+  - Notes: clean.
 - [x] **TASK-1: Project setup and data loading**
   - [x] App runs with `streamlit run app.py` and shows a title
   - [x] Loads `data/sales-data.csv`; handles date, numeric, and categorical columns per the data spec
