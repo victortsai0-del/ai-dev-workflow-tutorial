@@ -3,7 +3,7 @@
 import pandas as pd
 import pytest
 
-from data import DataLoadError, load_data, total_orders, total_sales
+from data import DataLoadError, load_data, monthly_trend, total_orders, total_sales
 
 
 def sample_df():
@@ -68,3 +68,13 @@ def test_total_sales():
 
 def test_total_orders():
     assert total_orders(sample_df()) == 4
+
+
+def test_monthly_trend():
+    result = monthly_trend(sample_df())
+
+    assert list(result.index) == [
+        pd.Timestamp("2024-01-01"),
+        pd.Timestamp("2024-02-01"),
+    ]
+    assert result.tolist() == pytest.approx([150.00, 230.00])
