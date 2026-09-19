@@ -9,10 +9,6 @@ Each milestone moves through To Do -> In Progress -> Done.
 - Changes committed with the milestone ID in the message
 
 ## To Do
-- [ ] **TASK-1: Project setup and data loading**
-  - [ ] App runs with `streamlit run app.py` and shows a title
-  - [ ] Loads `data/sales-data.csv`; handles date, numeric, and categorical columns per the data spec
-  - Commit:
 - [ ] **TASK-2: KPI scorecards**
   - [ ] Total Sales displayed as formatted currency (e.g. $116,500)
   - [ ] Total Orders displayed as a formatted count (e.g. 482)
@@ -32,5 +28,9 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
+- [ ] **TASK-1: Project setup and data loading**
+  - [ ] App runs with `streamlit run app.py` and shows a title
+  - [ ] Loads `data/sales-data.csv`; handles date, numeric, and categorical columns per the data spec
+  - Commit:
 
 ## Done
