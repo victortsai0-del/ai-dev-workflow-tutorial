@@ -16,12 +16,13 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
-- [ ] **TASK-4: Category and region breakdowns**
-  - [ ] Bar chart of sales by category, sorted highest to lowest, all categories shown
-  - [ ] Bar chart of sales by region, sorted highest to lowest, all regions shown
-  - Commit:
 
 ## Done
+- [x] **TASK-4: Category and region breakdowns**
+  - [x] Bar chart of sales by category, sorted highest to lowest, all categories shown
+  - [x] Bar chart of sales by region, sorted highest to lowest, all regions shown
+  - Commit: d3693f6
+  - Notes: clean.
 - [x] **TASK-3: Sales trend chart**
   - [x] Line chart shows sales over time with correct data
   - [x] Interactive tooltips show exact values
