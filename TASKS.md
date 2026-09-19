@@ -9,10 +9,6 @@ Each milestone moves through To Do -> In Progress -> Done.
 - Changes committed with the milestone ID in the message
 
 ## To Do
-- [ ] **TASK-3: Sales trend chart**
-  - [ ] Line chart shows sales over time with correct data
-  - [ ] Interactive tooltips show exact values
-  - Commit:
 - [ ] **TASK-4: Category and region breakdowns**
   - [ ] Bar chart of sales by category, sorted highest to lowest, all categories shown
   - [ ] Bar chart of sales by region, sorted highest to lowest, all regions shown
@@ -24,6 +20,10 @@ Each milestone moves through To Do -> In Progress -> Done.
   - Commit:
 
 ## In Progress
+- [ ] **TASK-3: Sales trend chart**
+  - [ ] Line chart shows sales over time with correct data
+  - [ ] Interactive tooltips show exact values
+  - Commit:
 
 ## Done
 - [x] **TASK-2: KPI scorecards**
