@@ -9,13 +9,13 @@ Each milestone moves through To Do -> In Progress -> Done.
 - Changes committed with the milestone ID in the message
 
 ## To Do
+
+## In Progress
 - [ ] **TASK-5: Test and deploy**
   - [ ] Dashboard runs without errors or warnings against the full dataset
   - [ ] All PRD acceptance criteria verified against expected output (~$116,500 total sales, 482 orders)
   - [ ] Deployed to Streamlit Community Cloud with a public URL
   - Commit:
-
-## In Progress
 
 ## Done
 - [x] **TASK-4: Category and region breakdowns**
