@@ -3,7 +3,24 @@
 import pandas as pd
 import pytest
 
-from data import DataLoadError, load_data
+from data import DataLoadError, load_data, total_orders, total_sales
+
+
+def sample_df():
+    return pd.DataFrame(
+        {
+            "date": pd.to_datetime(
+                ["2024-01-15", "2024-01-20", "2024-02-10", "2024-02-15"]
+            ),
+            "order_id": ["ORD-1", "ORD-2", "ORD-3", "ORD-4"],
+            "product": ["Widget", "Gadget", "Widget", "Gizmo"],
+            "category": ["Electronics", "Accessories", "Electronics", "Accessories"],
+            "region": ["North", "South", "North", "West"],
+            "quantity": [1, 2, 1, 3],
+            "unit_price": [100.00, 25.00, 200.00, 10.00],
+            "total_amount": [100.00, 50.00, 200.00, 30.00],
+        }
+    )
 
 
 def test_load_data_missing_file():
@@ -43,3 +60,11 @@ def test_load_data_happy_path(tmp_path):
         "total_amount",
     ]
     assert pd.api.types.is_datetime64_any_dtype(df["date"])
+
+
+def test_total_sales():
+    assert total_sales(sample_df()) == pytest.approx(380.00)
+
+
+def test_total_orders():
+    assert total_orders(sample_df()) == 4

@@ -30,3 +30,11 @@ def load_data(path):
 
     df["date"] = pd.to_datetime(df["date"])
     return df
+
+
+def total_sales(df):
+    return df["total_amount"].sum()
+
+
+def total_orders(df):
+    return len(df)
