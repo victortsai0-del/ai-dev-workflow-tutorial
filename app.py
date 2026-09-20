@@ -40,23 +40,17 @@ trend_fig = px.line(
 )
 st.plotly_chart(trend_fig, use_container_width=True)
 
+def render_bar_chart(column, data, axis_label):
+    fig = px.bar(
+        x=data.index,
+        y=data.values,
+        labels={"x": axis_label, "y": "Sales ($)"},
+    )
+    fig.update_xaxes(categoryorder="array", categoryarray=list(data.index))
+    column.plotly_chart(fig, use_container_width=True)
+
+
 st.subheader("Breakdowns")
 col3, col4 = st.columns(2)
-
-category_data = sales_by_category(df)
-category_fig = px.bar(
-    x=category_data.index,
-    y=category_data.values,
-    labels={"x": "Category", "y": "Sales ($)"},
-)
-category_fig.update_xaxes(categoryorder="array", categoryarray=list(category_data.index))
-col3.plotly_chart(category_fig, use_container_width=True)
-
-region_data = sales_by_region(df)
-region_fig = px.bar(
-    x=region_data.index,
-    y=region_data.values,
-    labels={"x": "Region", "y": "Sales ($)"},
-)
-region_fig.update_xaxes(categoryorder="array", categoryarray=list(region_data.index))
-col4.plotly_chart(region_fig, use_container_width=True)
+render_bar_chart(col3, sales_by_category(df), "Category")
+render_bar_chart(col4, sales_by_region(df), "Region")

@@ -23,12 +23,18 @@ def load_data(path):
         df = pd.read_csv(path)
     except FileNotFoundError:
         raise DataLoadError(f"Data file not found at {path}") from None
+    except ValueError as e:
+        raise DataLoadError(f"Could not read data file: {e}") from None
 
     missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
     if missing:
         raise DataLoadError(f"Missing required column(s): {', '.join(missing)}")
 
-    df["date"] = pd.to_datetime(df["date"])
+    try:
+        df["date"] = pd.to_datetime(df["date"])
+    except ValueError as e:
+        raise DataLoadError(f"Could not parse date column: {e}") from None
+
     return df
 
 

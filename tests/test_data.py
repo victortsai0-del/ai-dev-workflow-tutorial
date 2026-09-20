@@ -47,6 +47,25 @@ def test_load_data_missing_column(tmp_path):
         load_data(str(csv_path))
 
 
+def test_load_data_empty_file(tmp_path):
+    csv_path = tmp_path / "empty.csv"
+    csv_path.write_text("")
+
+    with pytest.raises(DataLoadError, match="Could not read"):
+        load_data(str(csv_path))
+
+
+def test_load_data_bad_date(tmp_path):
+    csv_path = tmp_path / "bad-date.csv"
+    csv_path.write_text(
+        "date,order_id,product,category,region,quantity,unit_price,total_amount\n"
+        "not-a-date,ORD-1,Widget,Electronics,North,1,9.99,9.99\n"
+    )
+
+    with pytest.raises(DataLoadError, match="Could not parse date"):
+        load_data(str(csv_path))
+
+
 def test_load_data_happy_path(tmp_path):
     csv_path = tmp_path / "good.csv"
     csv_path.write_text(
