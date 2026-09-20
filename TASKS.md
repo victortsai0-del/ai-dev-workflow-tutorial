@@ -9,15 +9,17 @@ Each milestone moves through To Do -> In Progress -> Done.
 - Changes committed with the milestone ID in the message
 
 ## To Do
-- [ ] **TASK-5: Test and deploy**
-  - [ ] Dashboard runs without errors or warnings against the full dataset
-  - [ ] All PRD acceptance criteria verified against expected output (~$116,500 total sales, 482 orders)
-  - [ ] Deployed to Streamlit Community Cloud with a public URL
-  - Commit:
 
 ## In Progress
 
 ## Done
+- [x] **TASK-5: Test and deploy**
+  - [x] Dashboard runs without errors or warnings against the full dataset
+  - [x] All PRD acceptance criteria verified against expected output (~$116,500 total sales, 482 orders)
+  - [x] Deployed to Streamlit Community Cloud with a public URL
+  - Commit: 2640de3
+  - URL: https://ai-dev-workflow-tutorial-t9tpd6owpex2uqktu2o74c.streamlit.app/
+  - Notes: clean.
 - [x] **TASK-4: Category and region breakdowns**
   - [x] Bar chart of sales by category, sorted highest to lowest, all categories shown
   - [x] Bar chart of sales by region, sorted highest to lowest, all regions shown
